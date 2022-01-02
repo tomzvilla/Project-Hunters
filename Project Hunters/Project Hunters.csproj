@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Ammo.cs" />
+    <Compile Include="Clases\AmmoType.cs" />
+    <Compile Include="Clases\Brand.cs" />
+    <Compile Include="Clases\Caliber.cs" />
+    <Compile Include="Clases\Quotation.cs" />
+    <Compile Include="Clases\Supplier.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaz\" />
+    <Folder Include="Repositorio\" />
+    <Folder Include="Servicio\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,9 +30,6 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private void InitializeComponent()
         {
             this.lbl_tipo = new System.Windows.Forms.DataGridView();
-            this.btn_salir = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caliber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ammo_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,9 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.lbl_calibre = new System.Windows.Forms.Label();
             this.cmb_calibre = new System.Windows.Forms.ComboBox();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -83,36 +83,6 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.lbl_tipo.Name = "lbl_tipo";
             this.lbl_tipo.Size = new System.Drawing.Size(1150, 371);
             this.lbl_tipo.TabIndex = 0;
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(12, 560);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(119, 42);
-            this.btn_salir.TabIndex = 1;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(905, 560);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(119, 42);
-            this.btn_modificar.TabIndex = 3;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.Location = new System.Drawing.Point(1043, 560);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(119, 42);
-            this.btn_agregar.TabIndex = 4;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = true;
             // 
             // id
             // 
@@ -179,6 +149,37 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.description.HeaderText = "Descripcion";
             this.description.Name = "description";
             this.description.Width = 88;
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Location = new System.Drawing.Point(12, 560);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(119, 42);
+            this.btn_salir.TabIndex = 1;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.Location = new System.Drawing.Point(905, 560);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(119, 42);
+            this.btn_modificar.TabIndex = 3;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.Location = new System.Drawing.Point(1043, 560);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(119, 42);
+            this.btn_agregar.TabIndex = 4;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
             // 
             // lbl_calibre
             // 

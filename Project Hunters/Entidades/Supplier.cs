@@ -8,7 +8,7 @@ namespace Project_Hunters.Clases
 {
     public class Supplier
     {
-        int id_supplier { get; set; }
-        string supplier_name { get; set; }
+        public int id_supplier { get; set; }
+        public string supplier_name { get; set; }
     }
 }

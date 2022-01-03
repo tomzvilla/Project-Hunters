@@ -8,16 +8,16 @@ namespace Project_Hunters.Clases
 {
     public class Ammo
     {
-        int id_ammo { get; set; }
-        string description { get; set; }
-        Caliber caliber { get; set; }
-        AmmoType ammo_type { get; set; }
-        Brand brand { get; set; }
-        Supplier supplier { get; set; }
-        int grammage { get; set; }
-        int box_ammount { get; set; }
-        float unit_price_USD { get; set; }
-        int stock { get; set; }
+        public int id_ammo { get; set; }
+        public string description { get; set; }
+        public Caliber caliber { get; set; }
+        public AmmoType ammo_type { get; set; }
+        public Brand brand { get; set; }
+        public Supplier supplier { get; set; }
+        public int grammage { get; set; }
+        public int box_ammount { get; set; }
+        public float unit_price_USD { get; set; }
+        public int stock { get; set; }
 
     }
 }

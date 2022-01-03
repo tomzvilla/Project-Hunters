@@ -70,9 +70,11 @@
     <Compile Include="Repositorio\BrandRepositorio.cs" />
     <Compile Include="Repositorio\CaliberRepositorio.cs" />
     <Compile Include="Repositorio\DBHelper.cs" />
+    <Compile Include="Repositorio\SupplierRepositorio.cs" />
     <Compile Include="Servicio\AmmoTypeServicio.cs" />
     <Compile Include="Servicio\BrandServicio.cs" />
     <Compile Include="Servicio\CaliberServicio.cs" />
+    <Compile Include="Servicio\SupplierServicio.cs" />
     <EmbeddedResource Include="Interfaz\ListaPrecios\AmmoList\AmmoList.resx">
       <DependentUpon>AmmoList.cs</DependentUpon>
     </EmbeddedResource>

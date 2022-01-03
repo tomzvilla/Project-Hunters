@@ -20,6 +20,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private CaliberServicio caliberServicio;
         private BrandServicio brandServicio;
         private AmmoTypeServicio ammoTypeServicio;
+        private SupplierServicio supplierServicio;
         public AmmoList(main _main)
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             caliberServicio = new CaliberServicio();
             brandServicio = new BrandServicio();
             ammoTypeServicio = new AmmoTypeServicio();
+            supplierServicio = new SupplierServicio();        
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
@@ -39,6 +41,31 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             load_caliber();
             load_brand();
             load_ammo_type();
+            load_supplier();
+            ammo_query();
+        }
+
+        private void ammo_query()
+        {
+            var ammo_filter = new Ammo();
+        }
+
+        private void load_supplier()
+        {
+            var suppliers = supplierServicio.GetSuppliers();
+            var default_supplier = new Supplier();
+            default_supplier.id_supplier = 0;
+            default_supplier.supplier_name = "Seleccionar";
+            suppliers.Add(default_supplier);
+
+            var conector = new BindingSource();
+
+            conector.DataSource = suppliers;
+
+            cmb_proveedor.DataSource = conector;
+            cmb_proveedor.DisplayMember = "supplier_name";
+            cmb_proveedor.ValueMember = "id_supplier";
+            cmb_proveedor.SelectedItem = default_supplier;
         }
 
         private void load_caliber()
@@ -93,6 +120,11 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             cmb_tipo.DisplayMember = "ammo_type_name";
             cmb_tipo.ValueMember = "id_ammo_type";
             cmb_tipo.SelectedItem = default_ammo_type;
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

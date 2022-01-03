@@ -8,8 +8,8 @@ namespace Project_Hunters.Clases
 {
     public class Caliber
     {
-        int id_caliber { get; set; }
-        string caliber_name { get; set; }
+        public int id_caliber { get; set; }
+        public string caliber_name { get; set; }
 
     }
 }

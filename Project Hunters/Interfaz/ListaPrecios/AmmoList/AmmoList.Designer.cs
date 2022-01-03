@@ -192,6 +192,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             // cmb_calibre
             // 
+            this.cmb_calibre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_calibre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_calibre.FormattingEnabled = true;
             this.cmb_calibre.Location = new System.Drawing.Point(152, 71);
@@ -229,6 +230,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             // cmb_tipo
             // 
+            this.cmb_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo.FormattingEnabled = true;
             this.cmb_tipo.Location = new System.Drawing.Point(152, 121);
@@ -248,6 +250,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             // cmb_marca
             // 
+            this.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_marca.FormattingEnabled = true;
             this.cmb_marca.Location = new System.Drawing.Point(607, 24);
@@ -267,6 +270,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             // cmb_proveedor
             // 
+            this.cmb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_proveedor.FormattingEnabled = true;
             this.cmb_proveedor.Location = new System.Drawing.Point(607, 71);
@@ -320,6 +324,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.Controls.Add(this.lbl_tipo);
             this.Name = "AmmoList";
             this.Text = "AmmoList";
+            this.Load += new System.EventHandler(this.AmmoList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lbl_tipo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

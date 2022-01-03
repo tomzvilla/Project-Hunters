@@ -8,8 +8,8 @@ namespace Project_Hunters.Clases
 {
     public class Brand
     {
-        int id_brand { get; set; }
-        string brand_name { get; set; }
+        public int id_brand { get; set; }
+        public string brand_name { get; set; }
 
     }
 }

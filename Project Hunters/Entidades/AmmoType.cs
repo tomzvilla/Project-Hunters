@@ -8,8 +8,8 @@ namespace Project_Hunters.Clases
 {
     public class AmmoType
     {
-        int id_ammo_type { get; set; }
-        string ammo_type_name { get; set; }
+        public int id_ammo_type { get; set; }
+        public string ammo_type_name { get; set; }
 
     }
 }

@@ -66,8 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\AmmoTypeRepositorio.cs" />
+    <Compile Include="Repositorio\BrandRepositorio.cs" />
     <Compile Include="Repositorio\CaliberRepositorio.cs" />
     <Compile Include="Repositorio\DBHelper.cs" />
+    <Compile Include="Servicio\AmmoTypeServicio.cs" />
+    <Compile Include="Servicio\BrandServicio.cs" />
     <Compile Include="Servicio\CaliberServicio.cs" />
     <EmbeddedResource Include="Interfaz\ListaPrecios\AmmoList\AmmoList.resx">
       <DependentUpon>AmmoList.cs</DependentUpon>

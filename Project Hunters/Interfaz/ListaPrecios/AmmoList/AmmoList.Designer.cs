@@ -29,7 +29,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_tipo = new System.Windows.Forms.DataGridView();
+            this.dgv_ammo_list = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caliber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ammo_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,17 +56,17 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.cmb_proveedor = new System.Windows.Forms.ComboBox();
             this.ck_stock = new System.Windows.Forms.CheckBox();
             this.btn_consultar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_tipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ammo_list)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_tipo
+            // dgv_ammo_list
             // 
-            this.lbl_tipo.AllowUserToAddRows = false;
-            this.lbl_tipo.AllowUserToDeleteRows = false;
-            this.lbl_tipo.AllowUserToResizeRows = false;
-            this.lbl_tipo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.lbl_tipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lbl_tipo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ammo_list.AllowUserToAddRows = false;
+            this.dgv_ammo_list.AllowUserToDeleteRows = false;
+            this.dgv_ammo_list.AllowUserToResizeRows = false;
+            this.dgv_ammo_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_ammo_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ammo_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.caliber,
             this.ammo_type,
@@ -78,11 +78,11 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.stock,
             this.supplier,
             this.description});
-            this.lbl_tipo.Location = new System.Drawing.Point(12, 173);
-            this.lbl_tipo.MultiSelect = false;
-            this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(1150, 371);
-            this.lbl_tipo.TabIndex = 0;
+            this.dgv_ammo_list.Location = new System.Drawing.Point(12, 173);
+            this.dgv_ammo_list.MultiSelect = false;
+            this.dgv_ammo_list.Name = "dgv_ammo_list";
+            this.dgv_ammo_list.Size = new System.Drawing.Size(1150, 371);
+            this.dgv_ammo_list.TabIndex = 0;
             // 
             // id
             // 
@@ -322,11 +322,11 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.lbl_tipo);
+            this.Controls.Add(this.dgv_ammo_list);
             this.Name = "AmmoList";
             this.Text = "AmmoList";
             this.Load += new System.EventHandler(this.AmmoList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_tipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ammo_list)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +334,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
 
         #endregion
 
-        private System.Windows.Forms.DataGridView lbl_tipo;
+        private System.Windows.Forms.DataGridView dgv_ammo_list;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn caliber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ammo_type;

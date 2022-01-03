@@ -13,7 +13,7 @@ namespace Project_Hunters.Repositorio
         public List<Ammo> GetAmmos(Ammo ammo_filter, bool stock)
         {
             var ammoList = new List<Ammo>();
-            string sentenciaSQL = "SELECT A.id_ammo, A.description, A.grammage, A.box_ammount, A.unit_price_usd, A.stock, C.caliber_name, T.ammo_type_name," +
+            string sentenciaSQL = "SELECT A.*, C.caliber_name, T.ammo_type_name," +
                                  "B.brand_name, S.supplier_name FROM Ammo A" +
                                 " JOIN Caliber C ON A.id_caliber = C.id_caliber" +
                                 " JOIN AmmoType T ON A.id_ammo_type = T.id_ammo_type" +

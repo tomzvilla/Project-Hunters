@@ -21,6 +21,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private BrandServicio brandServicio;
         private AmmoTypeServicio ammoTypeServicio;
         private SupplierServicio supplierServicio;
+        private AmmoServicio ammoServicio;
         public AmmoList(main _main)
         {
             InitializeComponent();
@@ -28,12 +29,13 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             caliberServicio = new CaliberServicio();
             brandServicio = new BrandServicio();
             ammoTypeServicio = new AmmoTypeServicio();
-            supplierServicio = new SupplierServicio();        
+            supplierServicio = new SupplierServicio();
+            ammoServicio = new AmmoServicio();
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
         {
-
+            ammo_query();
         }
 
         private void AmmoList_Load(object sender, EventArgs e)
@@ -53,6 +55,30 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             ammo_filter.caliber = (Caliber)cmb_calibre.SelectedItem;
             ammo_filter.supplier = (Supplier)cmb_proveedor.SelectedItem;
             ammo_filter.description = txt_descripcion.Text.Trim();
+            bool stock = ck_stock.Checked;
+            dgv_ammo_list.Rows.Clear();
+
+            var ammo_list = ammoServicio.GetAmmo(ammo_filter, stock);
+
+            foreach(var ammo in ammo_list)
+            {
+                var fila = new string[]
+                {
+                    ammo.id_ammo.ToString(),
+                    ammo.caliber.caliber_name,
+                    ammo.ammo_type.ammo_type_name,
+                    ammo.grammage.ToString() + " gr.",
+                    ammo.brand.brand_name,
+                    ammo.box_ammount.ToString(),
+                    ammo.unit_price_USD.ToString(),
+                    "Nose",
+                    ammo.stock.ToString(),
+                    ammo.supplier.supplier_name,
+                    ammo.description
+
+                };
+                dgv_ammo_list.Rows.Add(fila);
+            }
 
         }
 

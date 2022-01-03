@@ -16,7 +16,7 @@ namespace Project_Hunters.Clases
         public Supplier supplier { get; set; }
         public int grammage { get; set; }
         public int box_ammount { get; set; }
-        public float unit_price_USD { get; set; }
+        public double unit_price_USD { get; set; }
         public int stock { get; set; }
 
     }

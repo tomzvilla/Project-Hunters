@@ -48,6 +48,12 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private void ammo_query()
         {
             var ammo_filter = new Ammo();
+            ammo_filter.ammo_type = (AmmoType)cmb_tipo.SelectedItem;
+            ammo_filter.brand = (Brand)cmb_marca.SelectedItem;
+            ammo_filter.caliber = (Caliber)cmb_calibre.SelectedItem;
+            ammo_filter.supplier = (Supplier)cmb_proveedor.SelectedItem;
+            ammo_filter.description = txt_descripcion.Text.Trim();
+
         }
 
         private void load_supplier()

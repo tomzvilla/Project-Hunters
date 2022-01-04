@@ -27,6 +27,7 @@ namespace Project_Hunters.Interfaz.Cotizacion
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
+            main.Show();
             this.Dispose();
         }
 
@@ -81,6 +82,12 @@ namespace Project_Hunters.Interfaz.Cotizacion
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             quotation_query();
+        }
+
+        private void QuotationList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.Show();
+            this.Dispose();
         }
     }
 }

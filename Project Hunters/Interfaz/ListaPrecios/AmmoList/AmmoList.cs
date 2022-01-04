@@ -159,7 +159,8 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            main.Show();
+            this.Dispose();
         }
 
         private void btn_ver_precio_Click(object sender, EventArgs e)
@@ -197,6 +198,12 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             {
                 MessageBox.Show("Debe seleccionar solo un registro", "Información", MessageBoxButtons.OK);
             }
+        }
+
+        private void AmmoList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.Show();
+            this.Dispose();
         }
     }
 }

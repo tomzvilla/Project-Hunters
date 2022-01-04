@@ -22,19 +22,19 @@ namespace Project_Hunters
         private void btn_lista_precios_Click(object sender, EventArgs e)
         {
             var lista = new AmmoList(this);
-            lista.ShowDialog();
+            lista.Show();
             this.Hide();
         }
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void btn_cotizacion_Click(object sender, EventArgs e)
         {
             var cotizacion = new QuotationList(this);
-            cotizacion.ShowDialog();
+            cotizacion.Show();
             this.Hide();
         }
     }

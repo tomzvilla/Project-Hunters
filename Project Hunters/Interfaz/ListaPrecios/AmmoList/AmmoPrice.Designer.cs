@@ -36,6 +36,10 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.txt_precio_usd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_precio_ars = new System.Windows.Forms.TextBox();
+            this.lbl_bonificacion = new System.Windows.Forms.Label();
+            this.txt_bonificacion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_precio_bonificado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_precio_titulo
@@ -61,7 +65,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // txt_item
             // 
             this.txt_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_item.Location = new System.Drawing.Point(249, 145);
+            this.txt_item.Location = new System.Drawing.Point(300, 148);
             this.txt_item.Name = "txt_item";
             this.txt_item.ReadOnly = true;
             this.txt_item.Size = new System.Drawing.Size(553, 31);
@@ -80,7 +84,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // txt_precio_usd
             // 
             this.txt_precio_usd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio_usd.Location = new System.Drawing.Point(249, 204);
+            this.txt_precio_usd.Location = new System.Drawing.Point(300, 207);
             this.txt_precio_usd.Name = "txt_precio_usd";
             this.txt_precio_usd.ReadOnly = true;
             this.txt_precio_usd.Size = new System.Drawing.Size(553, 31);
@@ -99,17 +103,60 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // txt_precio_ars
             // 
             this.txt_precio_ars.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio_ars.Location = new System.Drawing.Point(249, 265);
+            this.txt_precio_ars.Location = new System.Drawing.Point(300, 268);
             this.txt_precio_ars.Name = "txt_precio_ars";
             this.txt_precio_ars.ReadOnly = true;
             this.txt_precio_ars.Size = new System.Drawing.Size(553, 31);
             this.txt_precio_ars.TabIndex = 8;
             // 
+            // lbl_bonificacion
+            // 
+            this.lbl_bonificacion.AutoSize = true;
+            this.lbl_bonificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bonificacion.Location = new System.Drawing.Point(41, 326);
+            this.lbl_bonificacion.Name = "lbl_bonificacion";
+            this.lbl_bonificacion.Size = new System.Drawing.Size(174, 25);
+            this.lbl_bonificacion.TabIndex = 9;
+            this.lbl_bonificacion.Text = "Bonificacion (%):";
+            // 
+            // txt_bonificacion
+            // 
+            this.txt_bonificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bonificacion.Location = new System.Drawing.Point(300, 326);
+            this.txt_bonificacion.Name = "txt_bonificacion";
+            this.txt_bonificacion.Size = new System.Drawing.Size(553, 31);
+            this.txt_bonificacion.TabIndex = 10;
+            this.txt_bonificacion.TextChanged += new System.EventHandler(this.txt_bonificacion_TextChanged);
+            this.txt_bonificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_bonificacion_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 383);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Precio Bonificado ARS:";
+            // 
+            // txt_precio_bonificado
+            // 
+            this.txt_precio_bonificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_precio_bonificado.Location = new System.Drawing.Point(300, 377);
+            this.txt_precio_bonificado.Name = "txt_precio_bonificado";
+            this.txt_precio_bonificado.ReadOnly = true;
+            this.txt_precio_bonificado.Size = new System.Drawing.Size(553, 31);
+            this.txt_precio_bonificado.TabIndex = 12;
+            // 
             // AmmoPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 317);
+            this.ClientSize = new System.Drawing.Size(889, 462);
+            this.Controls.Add(this.txt_precio_bonificado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_bonificacion);
+            this.Controls.Add(this.lbl_bonificacion);
             this.Controls.Add(this.txt_precio_ars);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_precio_usd);
@@ -134,5 +181,9 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private System.Windows.Forms.TextBox txt_precio_usd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_precio_ars;
+        private System.Windows.Forms.Label lbl_bonificacion;
+        private System.Windows.Forms.TextBox txt_bonificacion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_precio_bonificado;
     }
 }

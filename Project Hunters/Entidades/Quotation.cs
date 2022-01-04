@@ -8,8 +8,8 @@ namespace Project_Hunters.Clases
 {
     public class Quotation
     {
-        Supplier supplier { get; set; }
-        float quotation { get; set; }
+        public Supplier supplier { get; set; }
+        public double quotation { get; set; }
 
     }
 }

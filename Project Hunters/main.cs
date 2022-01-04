@@ -1,4 +1,5 @@
-﻿using Project_Hunters.Interfaz.ListaPrecios.AmmoList;
+﻿using Project_Hunters.Interfaz.Cotizacion;
+using Project_Hunters.Interfaz.ListaPrecios.AmmoList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,18 @@ namespace Project_Hunters
         {
             var lista = new AmmoList(this);
             lista.ShowDialog();
+            this.Hide();
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_cotizacion_Click(object sender, EventArgs e)
+        {
+            var cotizacion = new QuotationList(this);
+            cotizacion.ShowDialog();
             this.Hide();
         }
     }

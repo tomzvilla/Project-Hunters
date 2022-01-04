@@ -22,6 +22,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private AmmoTypeServicio ammoTypeServicio;
         private SupplierServicio supplierServicio;
         private AmmoServicio ammoServicio;
+        private QuotationServicio quotationServicio;
         public AmmoList(main _main)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             ammoTypeServicio = new AmmoTypeServicio();
             supplierServicio = new SupplierServicio();
             ammoServicio = new AmmoServicio();
+            quotationServicio = new QuotationServicio();
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
@@ -40,6 +42,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
 
         private void AmmoList_Load(object sender, EventArgs e)
         {
+       
             load_caliber();
             load_brand();
             load_ammo_type();
@@ -71,10 +74,10 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
                     ammo.brand.brand_name,
                     ammo.box_ammount.ToString(),
                     ammo.unit_price_USD.ToString(),
-                    "Nose",
                     ammo.stock.ToString(),
                     ammo.supplier.supplier_name,
-                    ammo.description
+                    ammo.description,
+                    ammo.supplier.id_supplier.ToString()
 
                 };
                 dgv_ammo_list.Rows.Add(fila);
@@ -157,6 +160,43 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         private void btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_ver_precio_Click(object sender, EventArgs e)
+        {
+            // Precio Unitario * Cantidad Caja * 1.21 (IVA) * 1.05 (Flete) * 1.40 (Ganancia)
+
+            double IVA = 1.21;
+            double flete = 1.05;
+            double ganancia = 1.40;
+
+            if (dgv_ammo_list.SelectedRows.Count == 1)
+            {
+                var ammo = new Ammo();
+                ammo.description = Convert.ToString(dgv_ammo_list.SelectedRows[0].Cells["description"].Value);
+                double unit_price = Convert.ToDouble(dgv_ammo_list.SelectedRows[0].Cells["unit_price_usd"].Value);
+                int box_ammount = Convert.ToInt32(dgv_ammo_list.SelectedRows[0].Cells["box_ammount"].Value);
+
+                var supplier = new Supplier() {
+                    id_supplier = Convert.ToInt32(dgv_ammo_list.SelectedRows[0].Cells["id_supplier"].Value)
+            };
+
+                double quotation = quotationServicio.GetQuotation(supplier);
+
+                double final_price_usd = unit_price * box_ammount * IVA * flete * ganancia;
+
+                double final_price_ars = final_price_usd * quotation;
+
+                var priceForm = new AmmoPrice(ammo, Math.Round(final_price_usd,3,MidpointRounding.AwayFromZero), 
+                    Math.Round(final_price_ars, 3, MidpointRounding.AwayFromZero));
+                priceForm.ShowDialog();
+                return;
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar solo un registro", "Información", MessageBoxButtons.OK);
+            }
         }
     }
 }

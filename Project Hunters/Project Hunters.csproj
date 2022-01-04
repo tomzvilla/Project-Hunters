@@ -52,6 +52,18 @@
     <Compile Include="Entidades\Caliber.cs" />
     <Compile Include="Entidades\Quotation.cs" />
     <Compile Include="Entidades\Supplier.cs" />
+    <Compile Include="Interfaz\Cotizacion\QuotationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Cotizacion\QuotationList.Designer.cs">
+      <DependentUpon>QuotationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\ListaPrecios\AmmoList\AmmoPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\ListaPrecios\AmmoList\AmmoPrice.Designer.cs">
+      <DependentUpon>AmmoPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,14 +83,22 @@
     <Compile Include="Repositorio\BrandRepositorio.cs" />
     <Compile Include="Repositorio\CaliberRepositorio.cs" />
     <Compile Include="Repositorio\DBHelper.cs" />
+    <Compile Include="Repositorio\QuotationRepositorio.cs" />
     <Compile Include="Repositorio\SupplierRepositorio.cs" />
     <Compile Include="Servicio\AmmoServicio.cs" />
     <Compile Include="Servicio\AmmoTypeServicio.cs" />
     <Compile Include="Servicio\BrandServicio.cs" />
     <Compile Include="Servicio\CaliberServicio.cs" />
+    <Compile Include="Servicio\QuotationServicio.cs" />
     <Compile Include="Servicio\SupplierServicio.cs" />
+    <EmbeddedResource Include="Interfaz\Cotizacion\QuotationList.resx">
+      <DependentUpon>QuotationList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\ListaPrecios\AmmoList\AmmoList.resx">
       <DependentUpon>AmmoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\ListaPrecios\AmmoList\AmmoPrice.resx">
+      <DependentUpon>AmmoPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

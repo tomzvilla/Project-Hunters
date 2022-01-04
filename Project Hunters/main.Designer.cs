@@ -31,6 +31,8 @@ namespace Project_Hunters
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btn_lista_precios = new System.Windows.Forms.Button();
+            this.btn_cotizacion = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,19 +47,44 @@ namespace Project_Hunters
             // 
             // btn_lista_precios
             // 
-            this.btn_lista_precios.Location = new System.Drawing.Point(294, 275);
+            this.btn_lista_precios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lista_precios.Location = new System.Drawing.Point(230, 180);
             this.btn_lista_precios.Name = "btn_lista_precios";
-            this.btn_lista_precios.Size = new System.Drawing.Size(147, 81);
+            this.btn_lista_precios.Size = new System.Drawing.Size(254, 59);
             this.btn_lista_precios.TabIndex = 1;
-            this.btn_lista_precios.Text = "Lista de precios";
+            this.btn_lista_precios.Text = "Lista de precios Municiones";
             this.btn_lista_precios.UseVisualStyleBackColor = true;
             this.btn_lista_precios.Click += new System.EventHandler(this.btn_lista_precios_Click);
+            // 
+            // btn_cotizacion
+            // 
+            this.btn_cotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cotizacion.Location = new System.Drawing.Point(230, 258);
+            this.btn_cotizacion.Name = "btn_cotizacion";
+            this.btn_cotizacion.Size = new System.Drawing.Size(254, 59);
+            this.btn_cotizacion.TabIndex = 2;
+            this.btn_cotizacion.Text = "Cotizacion Dolar";
+            this.btn_cotizacion.UseVisualStyleBackColor = true;
+            this.btn_cotizacion.Click += new System.EventHandler(this.btn_cotizacion_Click);
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Location = new System.Drawing.Point(230, 333);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(254, 59);
+            this.btn_salir.TabIndex = 3;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_salir);
+            this.Controls.Add(this.btn_cotizacion);
             this.Controls.Add(this.btn_lista_precios);
             this.Controls.Add(this.label1);
             this.Name = "main";
@@ -71,6 +98,8 @@ namespace Project_Hunters
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_lista_precios;
+        private System.Windows.Forms.Button btn_cotizacion;
+        private System.Windows.Forms.Button btn_salir;
     }
 }
 

@@ -52,6 +52,8 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
 
         private void ammo_query()
         {
+            dgv_ammo_list.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgv_ammo_list.RowHeadersVisible = false;
             var ammo_filter = new Ammo();
             ammo_filter.ammo_type = (AmmoType)cmb_tipo.SelectedItem;
             ammo_filter.brand = (Brand)cmb_marca.SelectedItem;
@@ -83,6 +85,8 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
                 dgv_ammo_list.Rows.Add(fila);
             }
 
+            dgv_ammo_list.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
+            dgv_ammo_list.RowHeadersVisible = true;
         }
 
         private void load_supplier()

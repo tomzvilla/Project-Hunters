@@ -29,9 +29,9 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_ammo_list = new System.Windows.Forms.DataGridView();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
@@ -68,15 +68,14 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.dgv_ammo_list.AllowUserToAddRows = false;
             this.dgv_ammo_list.AllowUserToDeleteRows = false;
             this.dgv_ammo_list.AllowUserToResizeRows = false;
-            this.dgv_ammo_list.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ammo_list.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ammo_list.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_ammo_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ammo_list.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -90,33 +89,34 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.supplier,
             this.description,
             this.id_supplier});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ammo_list.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ammo_list.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_ammo_list.Location = new System.Drawing.Point(12, 173);
             this.dgv_ammo_list.MultiSelect = false;
             this.dgv_ammo_list.Name = "dgv_ammo_list";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ammo_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_ammo_list.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ammo_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_ammo_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ammo_list.Size = new System.Drawing.Size(1150, 371);
+            this.dgv_ammo_list.Size = new System.Drawing.Size(1240, 628);
             this.dgv_ammo_list.TabIndex = 0;
             // 
             // btn_salir
             // 
             this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(12, 560);
+            this.btn_salir.Location = new System.Drawing.Point(12, 807);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(119, 42);
             this.btn_salir.TabIndex = 1;
@@ -127,7 +127,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // btn_modificar
             // 
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(905, 560);
+            this.btn_modificar.Location = new System.Drawing.Point(979, 807);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(119, 42);
             this.btn_modificar.TabIndex = 3;
@@ -137,7 +137,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // btn_agregar
             // 
             this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.Location = new System.Drawing.Point(1043, 560);
+            this.btn_agregar.Location = new System.Drawing.Point(1133, 807);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(119, 42);
             this.btn_agregar.TabIndex = 4;
@@ -201,6 +201,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             this.cmb_tipo.Location = new System.Drawing.Point(152, 121);
             this.cmb_tipo.Name = "cmb_tipo";
             this.cmb_tipo.Size = new System.Drawing.Size(240, 28);
+            this.cmb_tipo.Sorted = true;
             this.cmb_tipo.TabIndex = 10;
             // 
             // lbl_marca
@@ -258,7 +259,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // btn_consultar
             // 
             this.btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consultar.Location = new System.Drawing.Point(1043, 107);
+            this.btn_consultar.Location = new System.Drawing.Point(1133, 107);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(119, 42);
             this.btn_consultar.TabIndex = 16;
@@ -269,7 +270,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // btn_ver_precio
             // 
             this.btn_ver_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ver_precio.Location = new System.Drawing.Point(905, 107);
+            this.btn_ver_precio.Location = new System.Drawing.Point(979, 107);
             this.btn_ver_precio.Name = "btn_ver_precio";
             this.btn_ver_precio.Size = new System.Drawing.Size(119, 42);
             this.btn_ver_precio.TabIndex = 17;
@@ -281,6 +282,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             this.id.HeaderText = "id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Visible = false;
             this.id.Width = 46;
             // 
@@ -288,60 +290,69 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             this.caliber.HeaderText = "Calibre";
             this.caliber.Name = "caliber";
-            this.caliber.Width = 83;
+            this.caliber.ReadOnly = true;
+            this.caliber.Width = 120;
             // 
             // ammo_type
             // 
             this.ammo_type.HeaderText = "Tipo";
             this.ammo_type.Name = "ammo_type";
-            this.ammo_type.Width = 64;
+            this.ammo_type.ReadOnly = true;
+            this.ammo_type.Width = 120;
             // 
             // grammage
             // 
             this.grammage.HeaderText = "Gramaje";
             this.grammage.Name = "grammage";
+            this.grammage.ReadOnly = true;
             this.grammage.Width = 95;
             // 
             // brand
             // 
             this.brand.HeaderText = "Marca";
             this.brand.Name = "brand";
-            this.brand.Width = 78;
+            this.brand.ReadOnly = true;
             // 
             // box_ammount
             // 
             this.box_ammount.HeaderText = "Cantidad por Caja";
             this.box_ammount.Name = "box_ammount";
-            this.box_ammount.Width = 118;
+            this.box_ammount.ReadOnly = true;
+            this.box_ammount.Width = 80;
             // 
             // unit_price_usd
             // 
             this.unit_price_usd.HeaderText = "Precio Unitario USD";
             this.unit_price_usd.Name = "unit_price_usd";
+            this.unit_price_usd.ReadOnly = true;
             this.unit_price_usd.Width = 129;
             // 
             // stock
             // 
             this.stock.HeaderText = "Stock";
             this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
             this.stock.Width = 75;
             // 
             // supplier
             // 
             this.supplier.HeaderText = "Proveedor";
             this.supplier.Name = "supplier";
+            this.supplier.ReadOnly = true;
             this.supplier.Width = 106;
             // 
             // description
             // 
             this.description.HeaderText = "Descripcion";
             this.description.Name = "description";
-            this.description.Width = 117;
+            this.description.ReadOnly = true;
+            this.description.Width = 350;
             // 
             // id_supplier
             // 
             this.id_supplier.HeaderText = "id proveedor";
             this.id_supplier.Name = "id_supplier";
+            this.id_supplier.ReadOnly = true;
             this.id_supplier.Visible = false;
             this.id_supplier.Width = 111;
             // 
@@ -349,7 +360,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 614);
+            this.ClientSize = new System.Drawing.Size(1264, 861);
             this.Controls.Add(this.btn_ver_precio);
             this.Controls.Add(this.btn_consultar);
             this.Controls.Add(this.ck_stock);

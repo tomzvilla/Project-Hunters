@@ -64,6 +64,7 @@ namespace Project_Hunters.Interfaz.ListaPrecios.AmmoList
             // 
             // txt_item
             // 
+            this.txt_item.Enabled = false;
             this.txt_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_item.Location = new System.Drawing.Point(300, 148);
             this.txt_item.Name = "txt_item";
